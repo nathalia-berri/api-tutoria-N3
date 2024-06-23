@@ -1,2 +1,8 @@
-# api-tutoria-N3
-N3 SERVER SIDE
+// página .env :
+# env = environment
+
+SECRET=segredinho
+------------------------------------------
+
+// página .env.example :
+SECRET
