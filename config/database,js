@@ -1,9 +1,15 @@
-import { Sequelize } from "sequelize"; // pacote importado
+// importar o pacote sequelize
+import { Sequelize } from "sequelize"; 
 
-const db = new Sequelize('tutoria', 'root', '', { // variável para mapear o banco de dados
+// configurar conexão com o banco de dados
+const db = new Sequelize('tutoria', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
-})
+});
+/* tutoria = nome da database
+root = nome do usuário no MySQL
+' ' = senha
+*/
 
-export default db // exportar para outros módulos
+export default db // exportar a instância do sequelize para outros módulos
 

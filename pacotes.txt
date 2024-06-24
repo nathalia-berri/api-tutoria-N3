@@ -4,6 +4,7 @@ npm init -y
 npm install express
 npm install --save mysql2
 npm install sequelize
+npm install cors
 npm install express body-parser dotenv-safe jsonwebtoken -save
 
 ---------------------------------

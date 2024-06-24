@@ -4,7 +4,7 @@ CREATE DATABASE tutoria;
 USE tutoria;
 
 -------------- CRIANDO AS TABELAS --------------
--- TABELA autor
+-- TABELA tutor
 CREATE TABLE tutor (
 cpf INT PRIMARY KEY,
 nome VARCHAR(100),
