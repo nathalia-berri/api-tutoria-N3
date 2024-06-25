@@ -22,6 +22,11 @@ Content-Type: application/json
     "email": "nathalia.novo@gmail.com"
 }
 
+// visualizar os pets do tutor de cpf 123456789
+###
+GET http://localhost:5000/api/tutor/123456789/pets
+Content-Type: application/json
+
 // apagar tutor de cpf 123456789
 ###
 DELETE http://localhost:5000/tutor/123456789 HTTP/1.1

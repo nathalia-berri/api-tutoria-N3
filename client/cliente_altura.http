@@ -1,0 +1,13 @@
+// nova altura
+POST http://localhost:5000/altura HTTP/1.1
+Content-Type: application/json
+
+{
+    "altura": 42,
+    "codigo_pet": 1
+}
+
+// visualizar alturas
+###
+GET http://localhost:5000/altura HTTP/1.1
+Content-Type: application/json

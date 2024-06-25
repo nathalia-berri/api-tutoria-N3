@@ -1,7 +1,6 @@
 // PACOTES INSTALADOS VSCODE
 
 npm init -y
-npm install express
 npm install --save mysql2
 npm install sequelize
 npm install cors

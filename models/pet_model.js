@@ -1,9 +1,8 @@
 // pet_models
 
 import { Sequelize } from "sequelize";
-const {DataTypes} = Sequelize;
+const { DataTypes } = Sequelize;
 import db from "../config/database.js";
-import Altura from "./altura_model.js";
 import Tutor from "./tutor_model.js";
 
 const Pet = db.define('pet', {
@@ -17,14 +16,6 @@ const Pet = db.define('pet', {
     },
     genero_pet: { 
         type: DataTypes.STRING(50)
-    },
-    altura: { 
-        type: DataTypes.FLOAT, 
-        foreignKey: true,
-        references: {
-            model: Altura, // referência ao modelo Altura
-            key: 'id_altura' // chave primária da tabela Altura
-        }
     },
     cpf_tutor: {
         type: DataTypes.INTEGER,
@@ -41,8 +32,6 @@ const Pet = db.define('pet', {
     });
 
 // ORM: Mapeamento Objeto-Relacional
-// um tutor tem muitos pets (1:n):
-Tutor.hasMany(Pet, { foreignKey: 'cpf_tutor' });
 // um pet pertence a um tutor (1:1):
 Pet.belongsTo(Tutor, { foreignKey: 'cpf_tutor' });
   

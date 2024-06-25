@@ -1,0 +1,30 @@
+// novo pet
+POST http://localhost:5000/pet HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome_pet": "Bibow",
+    "genero_pet": "Macho",
+    "cpf_tutor": "123456789"
+}
+
+// visualizar pets
+###
+GET http://localhost:5000/pet HTTP/1.1
+Content-Type: application/json
+
+// atualizar pet
+###
+PUT http://localhost:5000/pet/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome_pet": "Polly",
+    "genero_pet": "Fêmea",
+    "cpf_tutor": "123456789"
+}
+
+// apagar pet
+###
+DELETE http://localhost:5000/pet/1 HTTP/1.1
+Content-Type: application/json
