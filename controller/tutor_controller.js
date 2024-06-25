@@ -2,23 +2,23 @@ import Tutor from "../models/tutor_model.js";
 
 export const getTutor = async (req, res) => {
     try {
-        const tutores = await tutor.findAll();
+        const tutores = await Tutor.findAll();
         res.send(tutores);
     } catch (e) {
         console.log("Erro ao acessar a tabela Tutor", e);
     }
-}
+};
 
 export const createTutor = async (req, res) => {
     try {
         await Tutor.create(req.body);
         res.json({
             "message":"Um novo registro de Tutor foi inserido."
-        })
+        });
     } catch (e) {
-        console.log("Erro ao inserir um novo registro na tabela Tutor", e);
+        console.log("Erro ao inserir um novo registro na tabela Tutor.", e);
     }
-}
+};
 
 export const updateTutor = async (req,res) => {
     try {
@@ -26,14 +26,14 @@ export const updateTutor = async (req,res) => {
             where: {
                 cpf: req.params.cpf
             }
-        })
+        });
         res.json({
-            "message":"A categoria " + req.params.cpf + " foi atualizada."
-        })
+            "message":"O Tutor de cpf nº " + req.params.cpf + " foi atualizado."
+        });
     } catch (e) {
         console.log("Erro ao atualizar o registro Tutor.");
     }
-}
+};
 
 export const deleteTutor = async (req, res) => {
     try {
@@ -41,11 +41,11 @@ export const deleteTutor = async (req, res) => {
             where: {
                 cpf: req.params.cpf
             }
-        })
+        });
         res.json({
-            "message":"A categoria " + req.params.cpf + " foi excluída."
-        })
+            "message":"O Tutor de cpf nº " + req.params.cpf + " foi excluída."
+        });
     } catch (e) {
-        console.log("Erro ao excluir registro Tutor");
+        console.log("Erro ao excluir registro Tutor.");
     }
-}
+};

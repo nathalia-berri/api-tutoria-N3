@@ -1,7 +1,7 @@
 // tutor_models
 
 import { Sequelize } from "sequelize"; // importa o módulo Sequelize
-const {DataTypes} = Sequelize; // extrai as DataTypes (definidor de tipos de dados) do Sequelize
+const { DataTypes } = Sequelize; // extrai as DataTypes (definidor de tipos de dados) do Sequelize
 import db from "../config/database.js"; // importa a configuração do banco de dados
 
 // definindo a tabela Tutor
