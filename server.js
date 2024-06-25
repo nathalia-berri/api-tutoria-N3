@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import db from "./config/database.js"
 
+import router from "./routes/tutor_routes.js"; 
 
 // base para construir as rotas
 const server = express();
@@ -17,11 +18,13 @@ try {
 
 }
 
-/*// rotas, microframework do Express
-server.use(tutor_rota);
-server.use(pet_rota);
-server.use(altura_rota);
+// rotas, microframework do Express
+server.use(tutor_routes);
+/*
+server.use(pet_routes);
+server.use(altura_routes);
+*/
 
-server.use(loginRoutes);*/
+server.use(loginRoutes);
 
 server.listen(5000, () => console.log("Servidor em execução em http://localhost:5000"));
