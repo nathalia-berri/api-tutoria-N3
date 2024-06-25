@@ -25,9 +25,6 @@ try {
 server.use(tutor_routes);
 server.use(pet_routes);
 server.use(altura_routes);
-/*
-server.use(loginRoutes);
-*/
 
 server.listen(5000, () => console.log("Servidor em execução em http://localhost:5000"));
 };

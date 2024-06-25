@@ -1,5 +1,8 @@
 # @name tokenacc
-POST http://localhost:5000/login HTTP/1.1
+
+// requisição de login
+###
+POST http://localhost:3000/auth/login HTTP/1.1
 Content-Type: application/json
 
 {
@@ -7,10 +10,12 @@ Content-Type: application/json
     "pwd": "123"
 }
 
+// requisição para acessar rota protegida por token jwt
 ###
-GET http://localhost:5000/exemplo HTTP/1.1
-x-access-token:{{tokenacc.response.body.token}}
+GET http://localhost:3000/auth/protectedExample HTTP/1.1
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5MzU0MTg2LCJleHAiOjE3MTkzNTc3ODZ9.N-Lbu31nacfSW_7NVPx7yqO8tpOYhmdmX_yJhknXx9s
 
+// requisição para logout
 ###
-POST http://localhost:5000/logout HTTP/1.1
+POST http://localhost:3000/auth/logout HTTP/1.1
 Content-Type: application/json
